@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let currentMonth = new Date().getMonth();
   let currentYear = new Date().getFullYear();
+  const today = new Date().getDate(); // 현재 날짜
 
   const months = [
     "January",
@@ -38,6 +39,16 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 1; i <= daysInMonth; i++) {
       const dayDiv = document.createElement("div");
       dayDiv.textContent = i;
+
+      // 현재 날짜에 클래스 추가
+      if (
+        i === today &&
+        month === new Date().getMonth() &&
+        year === new Date().getFullYear()
+      ) {
+        dayDiv.classList.add("current-day");
+      }
+
       daysContainer.appendChild(dayDiv);
     }
 

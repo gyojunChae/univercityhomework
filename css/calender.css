@@ -38,6 +38,12 @@ body {
 }
 
 /*#6*/
+.wrapper .cal_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 양끝으로 배치 */
+  margin-bottom: 30px;
+}
 .wrapper .nav {
   display: flex;
   align-items: center;
@@ -103,4 +109,19 @@ body {
 }
 .days li.active::before {
   background: #008aff;
+}
+/* 추가된 CSS */
+.current-day {
+  background-color: rgba(
+    128,
+    128,
+    128,
+    0.3
+  ); /* light gray with some transparency */
+  border-radius: 50%;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
 }
