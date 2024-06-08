@@ -1,0 +1,86 @@
+/* Navbar CSS */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.nav_logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.nav_menu,
+.nav_icon {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav_menu li,
+.nav_icon li {
+  margin: 0 10px;
+}
+
+.nav_menu li a,
+.nav_icon li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.nav_menu li a:hover,
+.nav_icon li a:hover {
+  background-color: #575757;
+}
+
+/* CSS Filter to change image color to white */
+.nav_icon img,
+.nav_toggle img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(360deg)
+    brightness(100%) contrast(100%);
+}
+
+.nav_toggle {
+  display: none;
+}
+
+/* Media Query for mobile view */
+@media (max-width: 768px) {
+  .nav_menu,
+  .nav_icon {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav_menu li,
+  .nav_icon li {
+    margin: 0;
+    text-align: center;
+  }
+
+  .nav_toggle {
+    display: block;
+  }
+
+  .nav_toggle img {
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .nav_menu.active,
+  .nav_icon.active {
+    display: flex;
+  }
+}
