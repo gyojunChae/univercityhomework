@@ -84,3 +84,12 @@ body {
   }
 }
 /*메인 자소서 페이지*/
+.myselftitle {
+  display: flex;
+  align-items: center; /* 세로 가운데 정렬 */
+}
+.myself-image img{
+  width: 100px;
+  height: auto;
+  margin: 20px 20px 20px 20px;
+}
