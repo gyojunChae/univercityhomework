@@ -84,7 +84,6 @@ body {
   }
 }
 
-/* New CSS for main content and buttons */
 html,
 body {
   height: 100%;
@@ -95,7 +94,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100% - 60px); /* Adjust according to the actual navbar height */
+  height: calc(100% - 60px);
 }
 
 .button {

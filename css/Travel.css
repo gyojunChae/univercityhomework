@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: antiquewhite;
 }
 
 .navbar {
@@ -46,7 +47,8 @@ body {
 /* CSS Filter to change image color to white */
 .nav_icon img,
 .nav_toggle img {
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(360deg) brightness(100%) contrast(100%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(360deg)
+    brightness(100%) contrast(100%);
 }
 
 .nav_toggle {

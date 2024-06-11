@@ -84,12 +84,87 @@ body {
   }
 }
 /*메인 자소서 페이지*/
-.myselftitle {
-  display: flex;
-  align-items: center; /* 세로 가운데 정렬 */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
-.myself-image img{
-  width: 100px;
-  height: auto;
-  margin: 20px 20px 20px 20px;
+
+.myself {
+  display: flex;
+  height: 100vh; /* 전체 화면 높이 사용 */
+}
+
+.myselftitle {
+  background-color: rgb(230, 196, 146); /* 왼쪽 영역 배경색 */
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: center; /* 이미지 중앙 정렬 */
+  justify-content: flex-start; /* 상단에 정렬 */
+  width: 30%; /* 전체 너비의 30% 사용 */
+  padding-top: 50px; /* 상단 여백 50px (기존 20px + 추가 30px) */
+  box-sizing: border-box; /* 패딩을 포함한 박스 크기 계산 */
+}
+
+.myself-text2 {
+  background-color: ivory; /* 오른쪽 영역 배경색 */
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: flex-start; /* 왼쪽으로 정렬 */
+  justify-content: flex-start; /* 상단에 정렬 */
+  width: 70%; /* 전체 너비의 70% 사용 */
+  padding-top: 50px; /* 상단 여백 50px (기존 20px + 추가 30px) */
+  padding-left: 20px; /* 왼쪽 여백 20px */
+  box-sizing: border-box; /* 패딩을 포함한 박스 크기 계산 */
+}
+
+.myself-image {
+  display: flex;
+  justify-content: center; /* 가로 중심 정렬 */
+  width: 100%;
+}
+
+.myself-image img {
+  width: 100px; /* 이미지 크기 조절 */
+  height: auto; /* 이미지 비율 유지 */
+  margin-bottom: 20px; /* 이미지와 텍스트 사이의 간격 */
+}
+
+.myself-text1 {
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+  color: gray; /* 텍스트 색상 */
+  width: 100%;
+  padding-left: 20px; /* 왼쪽 여백 20px */
+}
+
+.myself-text1 div::before {
+  content: "• "; /* 머릿말 점 표시 */
+  color: black; /* 점 색상 */
+}
+
+.myself-text2 {
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+  color: gray; /* 텍스트 색상 */
+}
+
+.myself-text2 div::before {
+  content: "• "; /* 머릿말 점 표시 */
+  color: black; /* 점 색상 */
+}
+
+.myself-text2 a {
+  color: green; /* 링크 색상 */
+  text-decoration: none; /* 링크 밑줄 제거 */
+  border-bottom: green; /* 밑줄 색상 */
+}
+
+.myself-text2 a:hover {
+  text-decoration: underline; /* 마우스 오버 시 밑줄 표시 */
+}
+#clock {
+  color: gray;
+  position: absolute; /* 절대 위치로 설정 */
+  bottom: 2%; /* 하단으로 20px 이동 */
+  left: 2%; /* 우측으로 20px 이동 */
 }
